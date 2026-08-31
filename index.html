@@ -96,7 +96,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCXZZ5C5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <!-- ==========================================
+ <!-- WhatsApp Button -->
+<a href="https://wa.me/541234567890?text=Hola,%20me%20gustaría%20consultar" 
+   target="_blank" 
+   class="whatsapp-button">
+  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="30" r="30" fill="#25D366"/>
+    <path d="M30 14C21.7 14 15 20.7 15 29C15 32.3 16.1 35.3 17.9 37.7L16 44L22.6 42.2C25 43.7 27.9 44.5 30 44.5C38.3 44.5 45 37.8 45 29.5C45 21.2 38.3 14 30 14ZM38.5 35.1C38.2 35.7 37.2 36.2 36.3 36.4C35.6 36.5 34.7 36.7 33 36C31.9 35.5 30.5 34.8 29.4 33.5C28.6 32.6 27.5 30.9 27.5 29.1C27.5 27.3 28.4 26.4 28.8 25.9C29.2 25.4 29.8 25.2 30.3 25.2C30.6 25.2 30.9 25.2 31.1 25.2C31.4 25.2 31.8 25.1 32.1 25.8C32.5 26.6 33.3 28.5 33.5 28.9C33.6 29.2 33.5 29.5 33.2 29.8C33 30 32.7 30.3 32.5 30.5C32.2 30.8 31.9 31.1 32.2 31.6C32.5 32.1 33.3 33.3 34.4 34.2C35.8 35.3 37 35.7 37.5 35.9C37.8 36 38.1 35.9 38.3 35.6C38.6 35.2 39.2 34.3 39.4 33.8C39.6 33.3 39.8 33.4 40.1 33.5C40.3 33.6 42 34.4 42.4 34.6C42.8 34.8 43.1 34.9 43.2 35.1C43.2 35.5 42.9 35.9 38.5 35.1Z" fill="white"/>
+  </svg>
+</a>
+
+<style>
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-button svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+</style> 
+ 
+ 
+ 
+ <!-- ==========================================
          PARTE 1: CABECERA Y NAVEGACIÓN (HEADER)
          ========================================== -->
     <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
