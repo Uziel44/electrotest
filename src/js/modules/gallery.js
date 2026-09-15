@@ -14,8 +14,8 @@ const FALLBACK_SRC = '/img/seccionador-altura.jpg';
 /** Foto y epígrafe asociados a cada servicio del acordeón. */
 const SERVICE_MEDIA = {
   protecciones: {
-    src: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80',
-    alt: 'Ensayo de protecciones en estación transformadora de alta tensión',
+    src: '/img/celda-mt-schneider.jpeg',
+    alt: 'Celda de media tensión con relés de protección y seccionador',
     caption: 'Ensayo de protecciones en estación transformadora.',
   },
   mantenimiento: {
