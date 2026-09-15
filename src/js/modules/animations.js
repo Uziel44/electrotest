@@ -79,8 +79,13 @@ export function initRevealAnimations() {
     gsap.set(children, FROM_STATE[direction] ?? FROM_STATE.up);
   });
 
+  // will-change se agrega recién acá (justo antes de animar) y no en CSS
+  // desde el principio: así el navegador sólo promueve a capa GPU los
+  // elementos que están animando en ese momento, no todos los [data-reveal]
+  // de la página desde que carga.
   const revealSingle = (el) => {
     const delay = parseFloat(el.dataset.revealDelay || '0');
+    gsap.set(el, { willChange: 'transform, opacity' });
     gsap.to(el, {
       x: 0,
       y: 0,
@@ -95,6 +100,7 @@ export function initRevealAnimations() {
 
   const revealGroup = (group) => {
     const children = group.querySelectorAll('[data-reveal]');
+    gsap.set(children, { willChange: 'transform, opacity' });
     gsap.to(children, {
       x: 0,
       y: 0,

@@ -54,10 +54,15 @@
 
   /* Estado inicial de los elementos que GSAP va a revelar.
      Se aplica sólo si el JS arrancó (clase .js en <html>), así el contenido
-     nunca queda invisible si el script falla o está bloqueado. */
+     nunca queda invisible si el script falla o está bloqueado.
+     Nota: will-change NO se declara acá a propósito. Puesto de forma fija
+     en CSS, el navegador promueve a capa GPU cada [data-reveal] apenas
+     carga la página, incluso los que todavía están fuera de pantalla —
+     con las grillas grandes (Equipo, Experiencia) eso satura la GPU y se
+     nota como jank/vibración al scrollear. animations.js ahora lo agrega
+     sólo en el instante de animar cada elemento y lo quita al terminar. */
   .js [data-reveal] {
     opacity: 0;
-    will-change: transform, opacity;
   }
 
   /* Halo difuminado detrás de imágenes destacadas */

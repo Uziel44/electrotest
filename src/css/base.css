@@ -4,12 +4,22 @@
 
 @layer base {
   html {
-    /* El scroll suave lo maneja Lenis; si el usuario pide menos movimiento
-       o el JS falla, este fallback nativo mantiene la experiencia. */
-    scroll-behavior: smooth;
+    /* Nota: NO se declara scroll-behavior:smooth acá a propósito. Lenis es
+       quien suaviza el scroll (smooth-scroll.js); si el navegador suaviza
+       "por encima" con su propio motor nativo al mismo tiempo, los dos
+       intentan corregir la posición en instantes distintos y el resultado
+       se ve tembloroso en vez de suave. El fallback para cuando Lenis no
+       corre (prefers-reduced-motion, o JS deshabilitado) usa la clase
+       .no-smooth-scroll de más abajo. */
     /* Evita que el header fijo tape los títulos al saltar a un ancla */
     scroll-padding-top: var(--header-height);
     -webkit-text-size-adjust: 100%;
+  }
+
+  /* Si Lenis no llegó a montarse (reduced-motion o JS caído), el navegador
+     vuelve a scrollear "a lo bruto" salvo que le pidamos lo contrario. */
+  html:not(.lenis) {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -24,7 +34,10 @@
     height: auto;
   }
 
-  .lenis.lenis-smooth {
+  /* Cinturón y tirantes: por si alguna versión de Lenis no llega a fijar
+     esto por su cuenta, forzamos que el navegador no "suavice" mientras
+     Lenis ya lo está haciendo. */
+  html.lenis-smooth {
     scroll-behavior: auto !important;
   }
 
@@ -121,12 +134,12 @@
       url('/img/seccionador-altura.jpg');
   }
 
-  /* En pantallas grandes el fondo queda fijo; en móvil se desactiva porque
-     background-attachment:fixed provoca saltos y repintados en iOS/Android. */
-  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-    .bg-equipo,
-    .bg-experiencia {
-      background-attachment: fixed;
-    }
-  }
+  /* Nota: se probó background-attachment:fixed acá para un efecto parallax
+     en desktop, pero con Lenis moviendo la página vía transform (no con el
+     scroll nativo), un fondo "fixed" se posiciona contra el viewport real
+     mientras el contenido se mueve con la interpolación de Lenis: quedan
+     desincronizados entre sí y se percibe como vibración al scrollear.
+     Si se quiere recuperar el efecto, hacerlo con un parallax controlado
+     por GSAP (ver data-parallax en animations.js), que sí queda atado al
+     mismo motor de scroll que el resto de la página. */
 }
