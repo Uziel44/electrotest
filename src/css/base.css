@@ -1,0 +1,132 @@
+/* =============================================================================
+   CAPA BASE — Reset de proyecto, tipografía y fondos de sección
+   ========================================================================== */
+
+@layer base {
+  html {
+    /* El scroll suave lo maneja Lenis; si el usuario pide menos movimiento
+       o el JS falla, este fallback nativo mantiene la experiencia. */
+    scroll-behavior: smooth;
+    /* Evita que el header fijo tape los títulos al saltar a un ancla */
+    scroll-padding-top: var(--header-height);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-800 font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Lenis toma el control del scroll: desactivamos el nativo para no duplicar */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  /* Escala tipográfica fluida: interpola entre móvil y desktop sin saltos */
+  .text-fluid-hero {
+    font-size: clamp(1.75rem, 1.1rem + 3.2vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  .text-fluid-h2 {
+    font-size: clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .text-fluid-lead {
+    font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+    line-height: 1.65;
+  }
+
+  /* Foco visible y coherente en toda la página (accesibilidad por teclado) */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+
+  /* Selección de texto con el color de marca */
+  ::selection {
+    background-color: var(--color-brand-500);
+    color: #fff;
+  }
+
+  /* Barra de scroll discreta en navegadores de escritorio */
+  @media (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-ink-50);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-brand-300);
+      border-radius: 9999px;
+      border: 2px solid var(--color-ink-50);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-brand-500);
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   FONDOS DE SECCIÓN
+   Para editar una foto de fondo, cambiar únicamente la url() de cada bloque.
+   Se usa image-set para servir el archivo original a cualquier navegador.
+   -------------------------------------------------------------------------- */
+@layer base {
+  .bg-hero,
+  .bg-equipo,
+  .bg-experiencia {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Hero: técnico trabajando en la torre a contraluz */
+  .bg-hero {
+    background-image: linear-gradient(
+        rgb(15 23 42 / 0.82),
+        rgb(15 23 42 / 0.68) 45%,
+        rgb(2 6 23 / 0.9)
+      ),
+      url('/img/hero-tecnico-torre.jpeg');
+  }
+
+  /* Equipo: cerros del NOA */
+  .bg-equipo {
+    background-image: linear-gradient(rgb(45 66 115 / 0.55), rgb(15 28 58 / 0.9)),
+      url('/img/cerros-noa.jpeg');
+  }
+
+  /* Experiencia: trabajo en altura sobre seccionador */
+  .bg-experiencia {
+    background-image: linear-gradient(rgb(15 23 42 / 0.68), rgb(2 6 23 / 0.92)),
+      url('/img/seccionador-altura.jpg');
+  }
+
+  /* En pantallas grandes el fondo queda fijo; en móvil se desactiva porque
+     background-attachment:fixed provoca saltos y repintados en iOS/Android. */
+  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+    .bg-equipo,
+    .bg-experiencia {
+      background-attachment: fixed;
+    }
+  }
+}

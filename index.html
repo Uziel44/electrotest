@@ -1,744 +1,1012 @@
- <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-<head>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LS1XJDYBN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- ===================== SEO ===================== -->
+    <title>Electro Test | Ingeniería y Mantenimiento en Media y Alta Tensión — NOA</title>
+    <meta
+      name="description"
+      content="Electro Test brinda ingeniería, ensayos, diagnóstico y mantenimiento de sistemas eléctricos de media y alta tensión en parques solares, estaciones transformadoras e industria. Delegaciones en La Rioja y Catamarca."
+    />
+    <meta
+      name="keywords"
+      content="media tensión, alta tensión, ensayos eléctricos, protecciones eléctricas, mantenimiento eléctrico, parques solares, estaciones transformadoras, telecontrol RTU, La Rioja, Catamarca, NOA"
+    />
+    <meta name="author" content="Electro Test" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.electrotest.com.ar/" />
+    <meta name="theme-color" content="#0ea5e9" />
 
-  gtag('config', 'G-LS1XJDYBN4');
-</script>
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PCXZZ5C5');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electro Test - Soluciones en Media y Alta Tensión</title>
-    <!-- Tailwind CSS para un diseño moderno y responsive -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuración personalizada de colores: Celeste Claro y Oscuro -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Reemplazamos la paleta de naranjas con celestes brillantes/claros
-                        orange: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8', // Celeste claro para bordes/badges
-                            500: '#0ea5e9', // Celeste corporativo brillante principal
-                            600: '#0284c7', // Celeste intermedio para efectos hover
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        // Reemplazamos la paleta de grises (slate) con tonos azulados/celestes oscuros
-                        slate: {
-                            50: '#f0f7ff',  // Fondo celeste blanquecino muy limpio
-                            100: '#e0f2fe', // Bordes e inputs claros
-                            200: '#bae6fd', // Bordes intermedios
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0369a1', // Texto secundario
-                            700: '#075985', // Texto de lectura
-                            800: '#0c4a6e', // Azul marino/celeste oscuro para texto destacado
-                            900: '#0f172a', // Azul noche profundo para cabeceras/fondos
-                        }
-                    }
-                }
-            }
-        }
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Electro Test" />
+    <meta
+      property="og:title"
+      content="Electro Test | Soluciones en Media y Alta Tensión"
+    />
+    <meta
+      property="og:description"
+      content="Ingeniería, diagnóstico y mantenimiento de alta precisión para parques solares, estaciones transformadoras y sistemas industriales del NOA."
+    />
+    <meta property="og:url" content="https://www.electrotest.com.ar/" />
+    <meta property="og:image" content="/img/hero-tecnico-torre.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+
+    <!-- Tipografía: preconnect para adelantar el handshake -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- La foto del hero se precarga: es el Largest Contentful Paint -->
+    <link rel="preload" as="image" href="/img/hero-tecnico-torre.jpeg" />
+
+    <!-- Datos estructurados para Google (ficha de empresa local) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Electro Test",
+        "description": "Ingeniería, diagnóstico y mantenimiento de sistemas eléctricos de media y alta tensión.",
+        "url": "https://www.electrotest.com.ar/",
+        "logo": "https://www.electrotest.com.ar/img/logo.png",
+        "image": "https://www.electrotest.com.ar/img/hero-tecnico-torre.jpeg",
+        "telephone": "+54-3834-400146",
+        "areaServed": [
+          { "@type": "State", "name": "Catamarca" },
+          { "@type": "State", "name": "La Rioja" },
+          { "@type": "Place", "name": "Noroeste Argentino" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Catamarca",
+          "addressCountry": "AR"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Delegación Catamarca",
+            "telephone": "+54-3834-400146",
+            "email": "diegoorozco_86@hotmail.com",
+            "availableLanguage": "Spanish"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "Delegación La Rioja",
+            "telephone": "+54-380-4418603",
+            "email": "pablo_sonzini@yahoo.com.ar",
+            "availableLanguage": "Spanish"
+          }
+        ],
+        "knowsAbout": [
+          "Protecciones eléctricas",
+          "Mantenimiento de media y alta tensión",
+          "Ensayos eléctricos",
+          "Sistemas de telecontrol RTU",
+          "Parques solares"
+        ]
+      }
     </script>
 
-    <style>
-        /* =========================================================================
-           SECCIÓN DE IMÁGENES DE FONDO (EDITAR AQUÍ LOS LINKS O RUTAS DE TUS FOTOS)
-           ========================================================================= */
+    <!-- ===================== ANALYTICS ===================== -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PCXZZ5C5');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LS1XJDYBN4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-LS1XJDYBN4');
+    </script>
 
-        /* LÍNEA 15: Foto de la Parte 2 (Técnico trabajando a contraluz) */
-        .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
-                              url('2.jpeg'); /* <-- Tu foto del técnico trabajando en la torre a contraluz al atardecer (Imagen 2) */
-            background-size: cover;
-            background-position: center;
-        }
+    <!-- CSS y JS: Vite inyecta acá los bundles optimizados -->
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
 
-        /* LÍNEA 23: Foto de la Parte 4 (Fondo de los cerros del NOA) */
-        .equipo-bg {
-            background-image: linear-gradient(rgba(45, 66, 115, 0.5), rgba(15, 28, 58, 0.85)), 
-                              url('WhatsApp%20Image%202026-08-25%20at%2020.47.37.jpeg'); /* <-- Tu foto de los imponentes cerros del NOA (Imagen 18) */
-            background-size: cover;
-            background-position: center;
-        }
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PCXZZ5C5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+        title="Google Tag Manager"
+      ></iframe>
+    </noscript>
 
-        /* LÍNEA 31: Foto de la Parte 6 (Fondo final difuminado de estación transformadora) */
-        .experiencia-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.85)), 
-                              url('9.jpg'); /* <-- Tu foto del técnico trabajando en altura en el seccionador (Imagen 15) */
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCXZZ5C5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
- <!-- WhatsApp Button -->
+    <!-- Accesibilidad: salto directo al contenido -->
+    <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
 
+    <!-- Barra de progreso de lectura -->
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
 
-<a href="https://wa.me/5493834400146?text=Hola,%20me%20gustaría%20consultar" 
-   target="_blank" 
-   class="whatsapp-button">
-  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="30" cy="30" r="30" fill="#25D366"/>
-    <path d="M17.47 14.38c-.29-.15-1.71-.85-1.98-.94-.27-.1-.46-.15-.66.15-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.15-1.23-.46-2.35-1.47-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.62-.91-2.22-.24-.58-.48-.5-.66-.51-.17-.01-.37-.01-.56-.01-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.2 3.03c.15.2 2.06 3.24 5.05 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.11.56-.08 1.71-.7 1.96-1.37.24-.68.24-1.26.17-1.37-.07-.12-.26-.19-.55-.34z"/><path d="M12.01 2C6.49 2 2 6.48 2 11.99c0 1.99.58 3.85 1.58 5.42L2 22l4.72-1.53a10 10 0 0 0 5.29 1.5h.01c5.52 0 10-4.48 10-9.98C22 6.48 17.53 2 12.01 2zm0 18.06h-.01a8.05 8.05 0 0 1-4.42-1.31l-.32-.19-3.13 1.02 1.04-3.06-.21-.32a8.02 8.02 0 0 1-1.28-4.21c0-4.45 3.63-8.07 8.09-8.07 2.16 0 4.19.84 5.72 2.37a8 8 0 0 1 2.37 5.71c0 4.45-3.63 8.06-8.85 8.06z"/></svg>
-  
-</a>
- 
-<style>
-.whatsapp-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  z-index: 999;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
-}
-
-.whatsapp-button:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
-}
-
-/* Para celulares */
-@media (max-width: 768px) {
-  .whatsapp-button {
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .whatsapp-button svg {
-    width: 50px !important;
-    height: 50px !important;
-  }
-}
-</style> 
- 
- 
- 
- <!-- ==========================================
-         PARTE 1: CABECERA Y NAVEGACIÓN (HEADER)
+    <!-- ==========================================
+         HEADER / NAVEGACIÓN
          ========================================== -->
-    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            
-            <!-- Logotipo de Electro Test -->
-            <a href="#inicio" class="flex items-center gap-3">
-                <!-- LÍNEA 51: Logo oficial de Electro Test -->
-                <!-- Logo circular ET con el rayo naranja (Imagen 5) -->
-                <img src="logo.png" alt="Electro Test Logo" class="h-14 w-auto object-contain">
-            </a>
+    <header class="site-header" data-header data-scrolled="false">
+      <div class="container-page flex h-20 items-center justify-between">
+        <a
+          href="#inicio"
+          class="flex items-center gap-3"
+          aria-label="Electro Test, ir al inicio"
+        >
+          <img
+            src="/img/logo.png"
+            alt="Electro Test"
+            class="site-logo"
+            width="140"
+            height="56"
+            fetchpriority="high"
+          />
+        </a>
 
-            <!-- Menú de navegación (Igual a Serelec pero adaptado) -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#inicio" class="text-slate-600 hover:text-orange-500 font-medium transition-colors">Inicio</a>
-                <a href="#empresa" class="text-slate-600 hover:text-orange-500 font-medium transition-colors">Empresa</a>
-                <a href="#servicios" class="text-slate-600 hover:text-orange-500 font-medium transition-colors">Servicios</a>
-                <a href="#experiencia" class="text-slate-600 hover:text-orange-500 font-medium transition-colors">Experiencia</a>
-                <a href="#contacto" class="bg-orange-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors shadow-sm">Contacto</a>
-            </nav>
+        <!-- Navegación de escritorio -->
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegación principal">
+          <a href="#inicio" class="nav-link" data-nav-link>Inicio</a>
+          <a href="#empresa" class="nav-link" data-nav-link>Empresa</a>
+          <a href="#equipo" class="nav-link" data-nav-link>Equipo</a>
+          <a href="#servicios" class="nav-link" data-nav-link>Servicios</a>
+          <a href="#experiencia" class="nav-link" data-nav-link>Experiencia</a>
+          <a href="#contacto" class="btn-primary !px-5 !py-2.5">Contacto</a>
+        </nav>
 
-            <!-- Botón menú móvil -->
-            <button id="btn-menu-movil" class="md:hidden text-slate-700 focus:outline-none">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+        <!-- Botón hamburguesa -->
+        <button
+          type="button"
+          class="menu-toggle flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg text-white transition-colors lg:hidden"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="menu-movil"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+      </div>
+
+      <!-- Menú móvil -->
+      <div id="menu-movil" class="mobile-menu" data-mobile-menu data-open="false">
+        <div>
+          <nav class="container-page space-y-1 py-4" aria-label="Navegación móvil">
+            <a href="#inicio" class="mobile-nav-link" data-nav-link>Inicio</a>
+            <a href="#empresa" class="mobile-nav-link" data-nav-link>Empresa</a>
+            <a href="#equipo" class="mobile-nav-link" data-nav-link>Equipo</a>
+            <a href="#servicios" class="mobile-nav-link" data-nav-link>Servicios</a>
+            <a href="#experiencia" class="mobile-nav-link" data-nav-link>Experiencia</a>
+            <a href="#contacto" class="btn-primary mt-3 w-full">Contacto</a>
+          </nav>
         </div>
-
-        <!-- Menú Móvil Desplegable -->
-        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-3 shadow-lg">
-            <a href="#inicio" class="block text-slate-700 hover:text-orange-500 font-medium py-2">Inicio</a>
-            <a href="#empresa" class="block text-slate-700 hover:text-orange-500 font-medium py-2">Empresa</a>
-            <a href="#servicios" class="block text-slate-700 hover:text-orange-500 font-medium py-2">Servicios</a>
-            <a href="#experiencia" class="block text-slate-700 hover:text-orange-500 font-medium py-2">Experiencia</a>
-            <a href="#contacto" class="block bg-orange-500 text-white text-center px-4 py-2 rounded-md font-medium">Contacto</a>
-        </div>
+      </div>
     </header>
 
+    <main id="contenido">
+      <!-- ==========================================
+           HERO
+           ========================================== -->
+      <section
+        id="inicio"
+        class="bg-hero relative flex min-h-screen items-center pt-20"
+        data-hero
+      >
+        <div class="container-page py-24 text-center md:text-left">
+          <div class="max-w-3xl">
+            <span
+              class="mb-6 inline-block rounded-full border border-brand-400/30 bg-brand-500/15 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-brand-300 backdrop-blur-sm"
+              data-hero-item
+            >
+              Ingeniería y Diagnóstico Eléctrico
+            </span>
 
-    <!-- ==========================================
-         PARTE 2: BANNER PRINCIPAL (HERO SECTION)
-         ========================================== -->
-    <section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center md:text-left">
-            <div class="max-w-3xl">
-                <span class="inline-block bg-orange-500/20 text-orange-400 font-semibold px-4 py-1.5 rounded-full text-sm uppercase tracking-wider mb-6">
-                    Ingeniería y Diagnóstico Eléctrico
+            <h1
+              class="text-fluid-hero mb-6 font-extrabold tracking-tight text-white"
+              data-hero-item
+            >
+              Soluciones técnicas especializadas en redes eléctricas de
+              <span class="text-brand-400">media y alta tensión</span>
+            </h1>
+
+            <p
+              class="text-fluid-lead mb-10 max-w-2xl font-light text-white/80"
+              data-hero-item
+            >
+              Brindamos ingeniería, diagnóstico y mantenimiento de alta precisión
+              orientados a plantas de generación renovable, estaciones
+              transformadoras y sistemas industriales complejos en toda la región.
+            </p>
+
+            <div
+              class="flex flex-col justify-center gap-4 sm:flex-row md:justify-start"
+              data-hero-item
+            >
+              <a href="#servicios" class="btn-primary btn-lg">
+                Nuestros Servicios
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a href="#contacto" class="btn-ghost btn-lg">Contactar un Ingeniero</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Señal visual de que hay más contenido abajo -->
+        <a
+          href="#empresa"
+          class="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/50 transition-colors hover:text-white md:flex"
+          aria-label="Desplazarse a la siguiente sección"
+        >
+          <span class="text-xs uppercase tracking-widest">Descubrí más</span>
+          <svg class="animate-scroll-hint h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+      </section>
+
+      <!-- ==========================================
+           EMPRESA
+           ========================================== -->
+      <section id="empresa" class="section-padding bg-white">
+        <div class="container-page">
+          <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <!-- Texto -->
+            <div>
+              <div class="section-eyebrow" data-reveal="up">
+                <span class="section-eyebrow-bar"></span>
+                <span class="section-eyebrow-text">Sobre Nosotros</span>
+              </div>
+
+              <h2
+                class="text-fluid-h2 mb-8 font-bold tracking-tight text-ink-900"
+                data-reveal="up"
+                data-reveal-delay="0.05"
+              >
+                ¿Quiénes Somos?
+              </h2>
+
+              <div class="space-y-6 text-lg leading-relaxed text-ink-600">
+                <p data-reveal="up" data-reveal-delay="0.1">
+                  En <strong class="text-ink-900">Electro Test</strong> somos una
+                  empresa especializada en
+                  <strong class="text-ink-900">
+                    ingeniería, diagnóstico y mantenimiento de sistemas eléctricos
+                    de Media y Alta Tensión</strong
+                  >.
+                </p>
+                <p data-reveal="up" data-reveal-delay="0.15">
+                  Trabajamos sobre infraestructura eléctrica crítica en
+                  <strong class="text-ink-900">
+                    parques solares, estaciones transformadoras e instalaciones
+                    industriales</strong
+                  >, brindando servicios orientados a preservar la integridad de
+                  los activos y asegurar la continuidad de las operaciones de
+                  nuestros clientes.
+                </p>
+                <p data-reveal="up" data-reveal-delay="0.2">
+                  Nuestro trabajo combina
+                  <strong class="text-ink-900">
+                    experiencia técnica, ensayos eléctricos, diagnóstico de activos
+                    y mantenimiento preventivo</strong
+                  >, permitiendo identificar condiciones de riesgo, anticipar
+                  fallas catastróficas y tomar decisiones técnicas oportunas
+                  basadas en datos duros del estado de las instalaciones.
+                </p>
+
+                <blockquote
+                  class="rounded-r-xl border-l-4 border-brand-500 bg-brand-50 py-4 pl-5 pr-4 italic text-ink-700"
+                  data-reveal="up"
+                  data-reveal-delay="0.25"
+                >
+                  «Nuestro compromiso es brindar respuestas técnicas precisas,
+                  seguras y confiables para instalaciones donde la disponibilidad
+                  y la continuidad del servicio son fundamentales.»
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Imagen -->
+            <div class="glow-behind group" data-reveal="right">
+              <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-ink-100 shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
+                  alt="Transformador de potencia en una estación transformadora de alta tensión"
+                  class="img-zoom h-full w-full object-cover"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  data-fallback="/img/seccionador-altura.jpg"
+                  decoding="async"
+                  data-fallback="/img/seccionador-altura.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           EQUIPO Y PRESENCIA REGIONAL
+           ========================================== -->
+      <section id="equipo" class="bg-equipo section-padding relative text-white">
+        <div class="container-page relative z-10">
+          <div class="mx-auto mb-16 max-w-3xl text-center">
+            <span class="section-eyebrow-text mb-3 block text-brand-300" data-reveal="up">
+              Presencia Territorial
+            </span>
+            <h2
+              class="text-fluid-h2 mb-6 font-bold tracking-tight"
+              data-reveal="up"
+              data-reveal-delay="0.05"
+            >
+              Nuestro Equipo Técnico
+            </h2>
+            <p class="text-fluid-lead font-light text-white/70" data-reveal="up" data-reveal-delay="0.1">
+              Contamos con presencia estratégica en el NOA para dar una respuesta
+              inmediata, ágil y altamente coordinada en el lugar de las operaciones.
+            </p>
+          </div>
+
+          <div
+            class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2"
+            data-reveal-group="up"
+          >
+            <!-- Delegación La Rioja -->
+            <article class="card-glass card-glass-hover" data-reveal>
+              <header class="mb-6 flex items-center gap-4">
+                <span
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-500/20 text-lg font-bold text-brand-300"
+                  aria-hidden="true"
+                >
+                  LR
                 </span>
-                <h1 class="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
-                    SOLUCIONES TÉCNICAS ESPECIALIZADAS EN REDES ELÉCTRICAS DE MEDIA Y ALTA TENSIÓN
-                </h1>
-                <p class="text-lg sm:text-xl text-slate-200 font-light mb-10 leading-relaxed">
-                    Brindamos ingeniería, diagnóstico y mantenimiento de alta precisión orientados a parques solares, estaciones transformadoras y sistemas industriales complejos en toda la región.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#servicios" class="bg-orange-500 text-white text-center px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-500/20">
-                        Nuestros Servicios
+                <div>
+                  <h3 class="text-xl font-bold">Delegación La Rioja</h3>
+                  <p class="text-sm text-white/50">Soporte e Ingeniería Zona Sur NOA</p>
+                </div>
+              </header>
+
+              <div class="space-y-4">
+                <div class="contact-row">
+                  <p class="font-semibold text-white/90">Ing. Sonzini Pablo</p>
+                  <div class="mt-2 flex flex-col gap-x-6 gap-y-1 text-sm sm:flex-row sm:flex-wrap">
+                    <a href="tel:+543804418603" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      380-4418603
                     </a>
-                    <a href="#contacto" class="bg-white/10 hover:bg-white/20 text-white text-center px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all border border-white/20">
-                        Contactar un Ingeniero
+                    <a href="mailto:pablo_sonzini@yahoo.com.ar" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      pablo_sonzini@yahoo.com.ar
                     </a>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
+                <div class="contact-row">
+                  <p class="font-semibold text-white/90">Ing. Zarzuelo Guillermo</p>
+                  <div class="mt-2 flex flex-col gap-x-6 gap-y-1 text-sm sm:flex-row sm:flex-wrap">
+                    <a href="tel:+543804722214" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      3804-722214
+                    </a>
+                    <a href="mailto:zarzueloguillermo@gmail.com" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      zarzueloguillermo@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-    <!-- ==========================================
-         PARTE 3: EMPRESA (QUIÉNES SOMOS)
-         ========================================== -->
-    <section id="empresa" class="py-24 bg-white scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
-                <!-- Columna de Texto -->
+            <!-- Delegación Catamarca -->
+            <article class="card-glass card-glass-hover" data-reveal>
+              <header class="mb-6 flex items-center gap-4">
+                <span
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-500/20 text-lg font-bold text-brand-300"
+                  aria-hidden="true"
+                >
+                  CAT
+                </span>
                 <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-1 bg-orange-500 rounded"></div>
-                        <span class="text-sm font-bold text-orange-500 uppercase tracking-widest">Sobre Nosotros</span>
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-8">
-                        ¿Quiénes Somos?
-                    </h2>
-                    <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-                        <p>
-                            En <strong class="text-slate-900">Electro Test</strong> somos una empresa especializada en <strong class="text-slate-900">ingeniería, diagnóstico y mantenimiento de sistemas eléctricos de Media y Alta Tensión</strong>.
-                        </p>
-                        <p>
-                            Trabajamos sobre infraestructura eléctrica crítica en <strong class="text-slate-900">parques solares, estaciones transformadoras e instalaciones industriales</strong>, brindando servicios orientados a preservar la integridad de los activos y asegurar la continuidad de las operaciones de nuestros clientes.
-                        </p>
-                        <p>
-                            Nuestro trabajo combina <strong class="text-slate-900">experiencia técnica, ensayos eléctricos, diagnóstico de activos y mantenimiento preventivo</strong>, permitiendo identificar condiciones de riesgo, anticipar fallas catastróficas y tomar decisiones técnicas oportunas basadas en datos duros del estado de las instalaciones.
-                        </p>
-                        <p class="border-l-4 border-orange-500 pl-4 italic text-slate-700 bg-slate-50 py-3 rounded-r-lg">
-                            "Nuestro compromiso es brindar respuestas técnicas precisas, seguras y confiables para instalaciones donde la disponibilidad y la continuidad del servicio son fundamentales."
-                        </p>
-                    </div>
+                  <h3 class="text-xl font-bold">Delegación Catamarca</h3>
+                  <p class="text-sm text-white/50">Soporte y Operación Zona Norte NOA</p>
+                </div>
+              </header>
+
+              <div class="space-y-4">
+                <div class="contact-row">
+                  <p class="font-semibold text-white/90">Orozco Diego</p>
+                  <div class="mt-2 flex flex-col gap-x-6 gap-y-1 text-sm sm:flex-row sm:flex-wrap">
+                    <a href="tel:+543834400146" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      3834-400146
+                    </a>
+                    <a href="mailto:diegoorozco_86@hotmail.com" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      diegoorozco_86@hotmail.com
+                    </a>
+                  </div>
                 </div>
 
-                <!-- Columna de Imagen -->
-                <div class="relative">
-                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-orange-500 to-blue-900 opacity-20 blur-lg"></div>
-                    <div class="relative bg-slate-100 rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
-                        <!-- LÍNEA 161: Imagen de Acompañamiento (Maniobras en celda o similar) -->
-                        <!-- Técnico con casco blanco y remera naranja en la cabina/celda interior (Imagen 14) -->
-                        <img src="5.jpg" alt="Maniobras en Celda de Media Tensión" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'">
-                    </div>
+                <div class="contact-row">
+                  <p class="font-semibold text-white/90">Ing. Baigorrí Angel Sebastian</p>
+                  <div class="mt-2 flex flex-col gap-x-6 gap-y-1 text-sm sm:flex-row sm:flex-wrap">
+                    <a href="tel:+543834605259" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      3834-605259
+                    </a>
+                    <a href="mailto:baigorrisebastian@gmail.com" class="contact-link">
+                      <svg class="h-4 w-4 text-brand-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      baigorrisebastian@gmail.com
+                    </a>
+                  </div>
                 </div>
-
-            </div>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
+      <!-- ==========================================
+           SERVICIOS
+           ========================================== -->
+      <section id="servicios" class="section-padding bg-ink-50">
+        <div class="container-page">
+          <div class="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <div class="section-eyebrow" data-reveal="up">
+                <span class="section-eyebrow-bar"></span>
+                <span class="section-eyebrow-text">Nuestra Especialidad</span>
+              </div>
+              <h2
+                class="text-fluid-h2 max-w-2xl font-bold tracking-tight text-ink-900"
+                data-reveal="up"
+                data-reveal-delay="0.05"
+              >
+                Servicios Técnicos de Ingeniería Eléctrica
+              </h2>
+            </div>
+            <p class="max-w-md text-lg text-ink-500" data-reveal="up" data-reveal-delay="0.1">
+              Ejecutamos ensayos normalizados, configuraciones de campo y mantenimiento
+              integral bajo los más estrictos estándares de seguridad de la industria.
+            </p>
+          </div>
 
-    <!-- ==========================================
-         PARTE 4: NUESTRO EQUIPO Y PRESENCIA REGIONAL
-         ========================================== -->
-    <section class="equipo-bg py-24 text-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold text-orange-400 uppercase tracking-widest block mb-3">Presencia Territorial</span>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Nuestro Equipo Técnico</h2>
-                <p class="text-slate-300 text-lg font-light">
-                    Contamos con presencia estratégica en el NOA para dar una respuesta inmediata, ágil y altamente coordinada en el lugar de las operaciones.
-                </p>
+          <div class="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
+            <!-- Imagen que acompaña al servicio abierto -->
+            <div class="lg:sticky lg:top-28 lg:col-span-5" data-reveal="left">
+              <figure class="card group !p-4">
+                <div class="aspect-[4/3] overflow-hidden rounded-xl bg-ink-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
+                    alt="Ensayo de protecciones en estación transformadora de alta tensión"
+                    class="img-zoom h-full w-full object-cover transition-opacity duration-300"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                    decoding="async"
+                    data-service-image
+                    data-fallback="/img/seccionador-altura.jpg"
+                  />
+                </div>
+                <figcaption
+                  class="mt-3 text-center text-xs italic text-ink-400"
+                  data-service-caption
+                >
+                  Ensayo de protecciones en estación transformadora.
+                </figcaption>
+              </figure>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                
-                <!-- Nodo La Rioja -->
-                <div class="bg-slate-900/60 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all group">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 font-bold text-lg">
-                            LR
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Delegación La Rioja</h3>
-                            <p class="text-sm text-slate-400">Soporte e Ingeniería Zona Sur NOA</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                            <p class="font-semibold text-slate-200">Ing. Sonzini Pablo</p>
-                            <div class="mt-2 flex flex-col sm:flex-row gap-x-6 gap-y-1 text-sm text-slate-300">
-                                <a href="tel:3804418603" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                    380-4418603
-                                </a>
-                                <a href="mailto:pablo_sonzini@yahoo.com.ar" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                    pablo_sonzini@yahoo.com.ar
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                            <p class="font-semibold text-slate-200">Ing. Zarzuelo Guillermo</p>
-                            <div class="mt-2 flex flex-col sm:flex-row gap-x-6 gap-y-1 text-sm text-slate-300">
-                                <a href="tel:3804722214" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                    3804-722214
-                                </a>
-                                <a href="mailto:zarzueloguillermo@gmail.com" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                    zarzueloguillermo@gmail.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nodo Catamarca -->
-                <div class="bg-slate-900/60 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all group">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 font-bold text-lg">
-                            CAT
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Delegación Catamarca</h3>
-                            <p class="text-sm text-slate-400">Soporte y Operación Zona Norte NOA</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                            <p class="font-semibold text-slate-200">Orozco Diego</p>
-                            <div class="mt-2 flex flex-col sm:flex-row gap-x-6 gap-y-1 text-sm text-slate-300">
-                                <a href="tel:3834400146" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                    3834-400146
-                                </a>
-                                <a href="mailto:diegoorozco_86@hotmail.com" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                    diegoorozco_86@hotmail.com
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                            <p class="font-semibold text-slate-200">Ing. Baigorrí Angel Sebastian</p>
-                            <div class="mt-2 flex flex-col sm:flex-row gap-x-6 gap-y-1 text-sm text-slate-300">
-                                <a href="tel:3834605259" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                    3834-605259
-                                </a>
-                                <a href="mailto:baigorrisebastian@gmail.com" class="hover:text-orange-400 flex items-center gap-1.5">
-                                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                    baigorrisebastian@gmail.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ==========================================
-         PARTE 5: SERVICIOS TÉCNICOS ESPECIALIZADOS
-         ========================================== -->
-    <section id="servicios" class="py-24 bg-slate-50 scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-1 bg-orange-500 rounded"></div>
-                        <span class="text-sm font-bold text-orange-500 uppercase tracking-widest">Nuestra Especialidad</span>
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-                        Servicios Técnicos de Ingeniería Eléctrica
-                    </h2>
-                </div>
-                <p class="text-slate-500 max-w-md mt-4 md:mt-0 text-lg">
-                    Ejecutamos ensayos normados, configuraciones de campo y mantenimiento integral bajo los más estrictos estándares de seguridad de la industria.
-                </p>
-            </div>
-
-            <!-- Estructura propuesta: Foto lateral izquierda + Listado en acordeones derecha -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Columna Izquierda: Imagen fija que cambia de contexto o ilustra el trabajo -->
-                <div class="lg:col-span-5 lg:sticky lg:top-28">
-                    <div class="relative bg-white p-4 rounded-2xl shadow-md border border-slate-100">
-                        <div class="rounded-xl overflow-hidden aspect-[4/3]">
-                            <!-- LÍNEA 300: Imagen de trabajos de campo (Ensayo con camión o maniobras) -->
-                            <!-- Ensayo de protecciones junto al camión de TRANSNOA en la estación transformadora (Imagen 7) -->
-                            <img src="8.jpeg" id="imagen-servicio" alt="Trabajo Técnico en Campo" class="w-full h-full object-cover transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=800&q=80'">
-                        </div>
-                        <p class="text-xs text-center text-slate-400 mt-3 italic">Registro fotográfico real de operaciones Electro Test en la región.</p>
-                    </div>
-                </div>
-
-                <!-- Columna Derecha: Acordeones de los Servicios -->
-                <div class="lg:col-span-7 space-y-4">
-                    
-                    <!-- 1. Protecciones Eléctricas -->
-                    <div class="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300">
-                        <button onclick="toggleAccordion('protecciones')" class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50/55 transition-colors">
-                            <span class="flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                                Protecciones Eléctricas
-                            </span>
-                            <svg id="icon-protecciones" class="w-5 h-5 text-slate-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="content-protecciones" class="hidden px-6 pb-6 pt-2 border-t border-slate-50">
-                            <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Instalación y configuración de relés de protección de diversas curvas y funciones (<strong class="text-slate-800">50/51, 87, 27</strong>).</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Parametrización exacta de curvas y puesta en servicio integral de celdas.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Ensayos funcionales lógicos y de cableado y verificación directa en campo.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Análisis post-falla de equipamiento mediante interpretación detallada de oscilografías.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- 2. Mantenimiento en Media y Alta Tensión -->
-                    <div class="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300">
-                        <button onclick="toggleAccordion('mantenimiento')" class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50/55 transition-colors">
-                            <span class="flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                                Mantenimiento en Media y Alta Tensión
-                            </span>
-                            <svg id="icon-mantenimiento" class="w-5 h-5 text-slate-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="content-mantenimiento" class="hidden px-6 pb-6 pt-2 border-t border-slate-50">
-                            <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Mantenimiento preventivo y correctivo de interruptores, tableros de comando de MT/AT, y equipos seccionadores de maniobra.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Ensayos certificados de sistemas de protección utilizando inyección de corriente primaria y secundaria.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Verificación precisa de curvas de disparo mecánicas y electrónicas en interruptores de potencia.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Inspección visual termográfica para detección prematura de puntos calientes y diagnóstico general de fallas.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Medición de mallas de puesta a tierra y medición de resistencia de contacto en seccionadores.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Planes de mantenimiento preventivo integral programado en celdas de Media Tensión.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- 3. Instalación de Equipamiento en Campo -->
-                    <div class="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300">
-                        <button onclick="toggleAccordion('instalacion')" class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50/55 transition-colors">
-                            <span class="flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                                Instalación de Equipamiento en Campo
-                            </span>
-                            <svg id="icon-instalacion" class="w-5 h-5 text-slate-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="content-instalacion" class="hidden px-6 pb-6 pt-2 border-t border-slate-50">
-                            <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Montaje mecánico y conexionado eléctrico de transformadores de corriente (TC) y tensión (TV).</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Emplazamiento de interruptores de potencia pesados y montaje de seccionadores de media y alta tensión.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Tendido y conexionado de cableados lógicos de control, potencia y verificación técnica de sus descargas de puesta a tierra.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Instalación especializada de terminales de transición (puntas terminales exteriores e interiores) en conductores de media tensión.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Ensayos de rigidez dialéctica y medición de resistencia de aislación de conductores BT/MT.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- 4. Sistemas de Telecontrol (RTU) -->
-                    <div class="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300">
-                        <button onclick="toggleAccordion('telecontrol')" class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50/55 transition-colors">
-                            <span class="flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                                Sistemas de Telecontrol (RTU)
-                            </span>
-                            <svg id="icon-telecontrol" class="w-5 h-5 text-slate-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="content-telecontrol" class="hidden px-6 pb-6 pt-2 border-t border-slate-50">
-                            <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Instalación, cableado inteligente y parametrización avanzada de unidades terminales remotas (RTU).</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Diagnóstico integral de protocolos de comunicación industrial y reparación de buses de datos de subestación.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Soporte técnico dedicado a campo (consultar compatibilidad de modelos de RTU de mercado).</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- 5. Reparaciones Eléctricas Especializadas -->
-                    <div class="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300">
-                        <button onclick="toggleAccordion('reparaciones')" class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50/55 transition-colors">
-                            <span class="flex items-center gap-3">
-                                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
-                                Reparaciones Eléctricas Especializadas
-                            </span>
-                            <svg id="icon-reparaciones" class="w-5 h-5 text-slate-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="content-reparaciones" class="hidden px-6 pb-6 pt-2 border-t border-slate-50">
-                            <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Diagnóstico, re-ingeniería y reparación de circuitos eléctricos complejos de control y potencia.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Solución de problemas en sistemas de servicios auxiliares y automatización integral de tableros.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Optimización electromecánica de equipamiento industrial y celdas heredadas.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>Asistencia correctiva e integral en sistemas de refrigeración industrial y climatización de salas eléctricas.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ==========================================
-         PARTE 6: EXPERIENCIA Y PROYECTOS (CON IMAGEN DIFUMINADA)
-         ========================================== -->
-    <section id="experiencia" class="experiencia-bg py-24 text-white relative scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            
-            <div class="max-w-3xl mx-auto mb-16">
-                <span class="text-sm font-bold text-orange-400 uppercase tracking-widest block mb-3">Nuestra Trayectoria</span>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Experiencia</h2>
-                <p class="text-slate-300 text-lg font-light">
-                    Respaldamos nuestro trabajo en campo con la ejecución de servicios críticos en plantas de generación limpia e instalaciones de distribución troncal.
-                </p>
-            </div>
-
-            <!-- Grilla de Clientes y Áreas de Trabajo -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                
-                <!-- Parques Solares -->
-                <div class="bg-slate-900/40 border border-white/5 p-8 rounded-2xl flex flex-col items-center group hover:bg-slate-900/60 transition-all">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Parques Solares</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Puesta en servicio, ensayos dialécticos y mantenimiento preventivo de plantas de generación renovable.</p>
-                </div>
-
-                <!-- Estaciones Transformadoras -->
-                <div class="bg-slate-900/40 border border-white/5 p-8 rounded-2xl flex flex-col items-center group hover:bg-slate-900/60 transition-all">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Estaciones Transf.</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Intervención en seccionadores, transformadores de potencia de ET y sistemas de comando.</p>
-                </div>
-
-                <!-- Distribuidora Catamarca -->
-                <div class="bg-slate-900/40 border border-white/5 p-8 rounded-2xl flex flex-col items-center group hover:bg-slate-900/60 transition-all">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Distribuidora Catamarca</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Ensayos y mantenimiento en redes troncales de MT/AT, protecciones y telecontrol.</p>
-                </div>
-
-                <!-- Parque Solar San Luis -->
-                <div class="bg-slate-900/40 border border-white/5 p-8 rounded-2xl flex flex-col items-center group hover:bg-slate-900/60 transition-all">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">P. S. San Luis</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Diagnóstico y mediciones funcionales de celdas de media tensión y puesta a tierra.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ==========================================
-         CONTACTO / FOOTER
-         ========================================== -->
-    <footer id="contacto" class="bg-slate-950 text-white pt-20 pb-8 scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 pb-16 border-b border-white/10">
-                
-                <!-- Logo e Info general -->
-                <div>
-                    <h3 class="text-2xl font-bold tracking-tight mb-6">
-                        ELECTRO <span class="text-orange-500">TEST</span>
-                    </h3>
-                    <p class="text-slate-400 leading-relaxed mb-6">
-                        Servicios y soluciones de ingeniería para la industria, generación renovable y transporte eléctrico en toda la región del NOA.
-                    </p>
-                    <p class="text-xs text-slate-500">
-                        Mapas de Redes e Infraestructura de Referencia:<br>
-                        <a href="https://www.transnoa.com.ar/assets/maps/photo_mapa2.pdf" target="_blank" class="text-orange-400 hover:underline">Sistemas Transnoa S.A.</a> | 
-                        <a href="https://cammesaweb.cammesa.com/geosadi/" target="_blank" class="text-orange-400 hover:underline">Geosadi CAMMESA</a>
-                    </p>
-                </div>
-
-                <!-- Enlaces rápidos -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-orange-500">Mapa del Sitio</h4>
-                    <ul class="space-y-3 text-slate-400">
-                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
-                        <li><a href="#empresa" class="hover:text-white transition-colors">La Empresa</a></li>
-                        <li><a href="#servicios" class="hover:text-white transition-colors">Nuestros Servicios</a></li>
-                        <li><a href="#experiencia" class="hover:text-white transition-colors">Nuestra Experiencia</a></li>
+            <!-- Acordeón de servicios -->
+            <div class="space-y-4 lg:col-span-7" data-accordion>
+              <!-- 1. Protecciones Eléctricas -->
+              <article class="accordion-item" data-reveal="up">
+                <h3>
+                  <button
+                    type="button"
+                    class="accordion-trigger"
+                    data-accordion-trigger="protecciones"
+                    aria-expanded="false"
+                    aria-controls="panel-protecciones"
+                    id="trigger-protecciones"
+                  >
+                    <span class="flex items-center gap-3">
+                      <span class="accordion-dot" aria-hidden="true"></span>
+                      Protecciones Eléctricas
+                    </span>
+                    <svg class="accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  class="accordion-panel"
+                  id="panel-protecciones"
+                  role="region"
+                  aria-labelledby="trigger-protecciones"
+                  data-open="false"
+                >
+                  <div>
+                    <ul class="accordion-list">
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Instalación y configuración de relés de protección de diversas curvas y funciones (<strong class="text-ink-800">50/51, 50N/51N, 67, 67N, 87, 21, 59, 27, 81, 46, 46BC</strong>).</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Análisis de selectividad.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Parametrización exacta de curvas y puesta en servicio integral de celdas.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Ensayos funcionales lógicos y de cableado y verificación directa en campo.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Análisis post-falla de equipamiento mediante interpretación detallada de oscilografías.</span>
+                      </li>
                     </ul>
+                  </div>
                 </div>
+              </article>
 
-                <!-- Contacto Centralizado -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-orange-500">Contacto Directo</h4>
-                    <ul class="space-y-4 text-slate-400 text-sm">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span><strong>La Rioja:</strong><br>Ing. Sonzini Pablo<br>Tel.: 380-4418603<br>Mail: pablo_sonzini@yahoo.com.ar<br><br>Ing. Zarzuelo Guillermo<br>Tel: 3804-722214<br>Mail: zarzueloguillermo@gmail.com</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-orange-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <span><strong>Catamarca:</strong><br>Orozco Diego<br>Tel: 3834-400146<br>Mail: diegoorozco_86@hotmail.com</span>
-                        </li>
+              <!-- 2. Mantenimiento en Media y Alta Tensión -->
+              <article class="accordion-item" data-reveal="up" data-reveal-delay="0.05">
+                <h3>
+                  <button
+                    type="button"
+                    class="accordion-trigger"
+                    data-accordion-trigger="mantenimiento"
+                    aria-expanded="false"
+                    aria-controls="panel-mantenimiento"
+                    id="trigger-mantenimiento"
+                  >
+                    <span class="flex items-center gap-3">
+                      <span class="accordion-dot" aria-hidden="true"></span>
+                      Mantenimiento en Media y Alta Tensión
+                    </span>
+                    <svg class="accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  class="accordion-panel"
+                  id="panel-mantenimiento"
+                  role="region"
+                  aria-labelledby="trigger-mantenimiento"
+                  data-open="false"
+                >
+                  <div>
+                    <ul class="accordion-list">
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Mantenimiento preventivo y correctivo de interruptores, tableros de comando de MT/AT, y equipos seccionadores de maniobra.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Ensayos certificados de sistemas de protección utilizando inyección de corriente primaria y secundaria.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Verificación efectiva de curvas de disparo mecánicas y electrónicas en interruptores de potencia.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Inspección visual termográfica para detección prematura de puntos calientes y diagnóstico general de fallas.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Medición de mallas de puesta a tierra y medición de resistencia de contacto en seccionadores.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Planes de mantenimiento preventivo integral programado en celdas de Media Tensión.</span>
+                      </li>
                     </ul>
+                  </div>
                 </div>
+              </article>
 
-            </div>
+              <!-- 3. Instalación de Equipamiento en Campo -->
+              <article class="accordion-item" data-reveal="up" data-reveal-delay="0.1">
+                <h3>
+                  <button
+                    type="button"
+                    class="accordion-trigger"
+                    data-accordion-trigger="instalacion"
+                    aria-expanded="false"
+                    aria-controls="panel-instalacion"
+                    id="trigger-instalacion"
+                  >
+                    <span class="flex items-center gap-3">
+                      <span class="accordion-dot" aria-hidden="true"></span>
+                      Instalación de Equipamiento en Campo
+                    </span>
+                    <svg class="accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  class="accordion-panel"
+                  id="panel-instalacion"
+                  role="region"
+                  aria-labelledby="trigger-instalacion"
+                  data-open="false"
+                >
+                  <div>
+                    <ul class="accordion-list">
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Montaje mecánico y conexionado eléctrico de transformadores de corriente (TC) y tensión (TV).</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Emplazamiento de interruptores de potencia pesados y montaje de seccionadores de media y alta tensión.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Tendido y conexionado de cableados lógicos de control, potencia y verificación técnica de sus descargas de puesta a tierra.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Instalación especializada de terminales de transición (puntas terminales exteriores e interiores) en conductores de media tensión.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Ensayos de rigidez dieléctrica y medición de resistencia de aislación de conductores BT/MT.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
 
-            <div class="pt-8 text-center text-sm text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p>&copy; 2026 Electro Test S.A. Todos los derechos reservados.</p>
-                <p class="text-xs">Desarrollo por PlexiWeb Development.</p>
+              <!-- 4. Sistemas de Telecontrol (RTU) -->
+              <article class="accordion-item" data-reveal="up" data-reveal-delay="0.15">
+                <h3>
+                  <button
+                    type="button"
+                    class="accordion-trigger"
+                    data-accordion-trigger="telecontrol"
+                    aria-expanded="false"
+                    aria-controls="panel-telecontrol"
+                    id="trigger-telecontrol"
+                  >
+                    <span class="flex items-center gap-3">
+                      <span class="accordion-dot" aria-hidden="true"></span>
+                      Sistemas de Telecontrol (RTU)
+                    </span>
+                    <svg class="accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  class="accordion-panel"
+                  id="panel-telecontrol"
+                  role="region"
+                  aria-labelledby="trigger-telecontrol"
+                  data-open="false"
+                >
+                  <div>
+                    <ul class="accordion-list">
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Instalación, cableado inteligente y parametrización avanzada de unidades terminales remotas (RTU).</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Diagnóstico integral de protocolos de comunicación industrial y reparación de buses de datos de subestación.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Soporte técnico dedicado a campo (consultar compatibilidad de modelos de RTU de mercado).</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 5. Reparaciones Eléctricas Especializadas -->
+              <article class="accordion-item" data-reveal="up" data-reveal-delay="0.2">
+                <h3>
+                  <button
+                    type="button"
+                    class="accordion-trigger"
+                    data-accordion-trigger="reparaciones"
+                    aria-expanded="false"
+                    aria-controls="panel-reparaciones"
+                    id="trigger-reparaciones"
+                  >
+                    <span class="flex items-center gap-3">
+                      <span class="accordion-dot" aria-hidden="true"></span>
+                      Reparaciones Eléctricas Especializadas
+                    </span>
+                    <svg class="accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  class="accordion-panel"
+                  id="panel-reparaciones"
+                  role="region"
+                  aria-labelledby="trigger-reparaciones"
+                  data-open="false"
+                >
+                  <div>
+                    <ul class="accordion-list">
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Diagnóstico, re-ingeniería y reparación de circuitos eléctricos complejos de control y potencia.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Solución de problemas en sistemas de servicios auxiliares y automatización integral de tableros.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Optimización electromecánica de equipamiento industrial y analizar celdas heredadas.</span>
+                      </li>
+                      <li>
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <span>Asistencia correctiva e integral en sistemas de refrigeración industrial y climatización de salas eléctricas.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
             </div>
+          </div>
         </div>
+      </section>
+
+      <!-- ==========================================
+           EXPERIENCIA
+           ========================================== -->
+      <section id="experiencia" class="bg-experiencia section-padding relative text-white">
+        <div class="container-page relative z-10 text-center">
+          <div class="mx-auto mb-16 max-w-3xl">
+            <span class="section-eyebrow-text mb-3 block text-brand-300" data-reveal="up">
+              Nuestra Trayectoria
+            </span>
+            <h2 class="text-fluid-h2 mb-6 font-bold tracking-tight" data-reveal="up" data-reveal-delay="0.05">
+              Experiencia
+            </h2>
+            <p class="text-fluid-lead font-light text-white/70" data-reveal="up" data-reveal-delay="0.1">
+              Respaldamos nuestro trabajo en campo con la ejecución de servicios
+              críticos en plantas de generación limpia e instalaciones de
+              distribución troncal.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+            data-reveal-group="up"
+          >
+            <!-- Generadoras Renovables -->
+            <article class="card-glass card-glass-hover group flex flex-col items-center" data-reveal>
+              <span class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-500/15 text-brand-300 transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" /></svg>
+              </span>
+              <h3 class="mb-3 text-xl font-bold">Generadoras Renovables</h3>
+              <p class="text-sm leading-relaxed text-white/60">
+                Puesta en servicio, ensayos dieléctricos y mantenimiento preventivo
+                de plantas de generación renovable.
+              </p>
+            </article>
+
+            <!-- Estaciones Transformadoras -->
+            <article class="card-glass card-glass-hover group flex flex-col items-center" data-reveal>
+              <span class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-500/15 text-brand-300 transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              </span>
+              <h3 class="mb-3 text-xl font-bold">Estaciones Transf.</h3>
+              <p class="text-sm leading-relaxed text-white/60">
+                Montaje de equipos de potencia y sistemas de comando.
+              </p>
+            </article>
+
+            <!-- Empresas Distribuidoras -->
+            <article class="card-glass card-glass-hover group flex flex-col items-center" data-reveal>
+              <span class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-500/15 text-brand-300 transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+              </span>
+              <h3 class="mb-3 text-xl font-bold">Empresas Distribuidoras</h3>
+              <p class="text-sm leading-relaxed text-white/60">
+                Ensayo y mantenimiento de centros de distribución de MT.
+              </p>
+            </article>
+          </div>
+
+          <!-- Llamado a la acción de cierre -->
+          <div class="mt-16" data-reveal="up">
+            <a href="#contacto" class="btn-primary btn-lg">
+              Solicitar una consulta técnica
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER / CONTACTO
+         ========================================== -->
+    <footer id="contacto" class="bg-ink-950 pb-8 pt-20 text-white">
+      <div class="container-page">
+        <div class="grid grid-cols-1 gap-12 border-b border-white/10 pb-16 lg:grid-cols-3">
+          <!-- Marca -->
+          <div data-reveal="up">
+            <h2 class="mb-6 text-2xl font-bold tracking-tight">
+              ELECTRO <span class="text-brand-500">TEST</span>
+            </h2>
+            <p class="mb-6 leading-relaxed text-white/60">
+              Servicios y soluciones de ingeniería para la industria, generación
+              renovable y transporte eléctrico en toda la región del NOA.
+            </p>
+            <p class="text-xs text-white/40">
+              Mapas de redes e infraestructura de referencia:<br />
+              <a
+                href="https://www.transnoa.com.ar/assets/maps/photo_mapa2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-400 hover:underline"
+                >Sistemas Transnoa S.A.</a
+              >
+              |
+              <a
+                href="https://cammesaweb.cammesa.com/geosadi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-400 hover:underline"
+                >Geosadi CAMMESA</a
+              >
+            </p>
+          </div>
+
+          <!-- Mapa del sitio -->
+          <nav aria-label="Mapa del sitio" data-reveal="up" data-reveal-delay="0.05">
+            <h2 class="mb-6 text-lg font-bold text-brand-500">Mapa del Sitio</h2>
+            <ul class="space-y-3 text-white/60">
+              <li><a href="#inicio" class="transition-colors hover:text-white">Inicio</a></li>
+              <li><a href="#empresa" class="transition-colors hover:text-white">La Empresa</a></li>
+              <li><a href="#equipo" class="transition-colors hover:text-white">Nuestro Equipo</a></li>
+              <li><a href="#servicios" class="transition-colors hover:text-white">Nuestros Servicios</a></li>
+              <li><a href="#experiencia" class="transition-colors hover:text-white">Nuestra Experiencia</a></li>
+            </ul>
+          </nav>
+
+          <!-- Contacto directo -->
+          <div data-reveal="up" data-reveal-delay="0.1">
+            <h2 class="mb-6 text-lg font-bold text-brand-500">Contacto Directo</h2>
+            <ul class="space-y-6 text-sm text-white/60">
+              <li class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-white">La Rioja</p>
+                  <p class="mt-2">
+                    Ing. Sonzini Pablo<br />
+                    <a href="tel:+543804418603" class="hover:text-brand-400">380-4418603</a><br />
+                    <a href="mailto:pablo_sonzini@yahoo.com.ar" class="hover:text-brand-400">pablo_sonzini@yahoo.com.ar</a>
+                  </p>
+                  <p class="mt-3">
+                    Ing. Zarzuelo Guillermo<br />
+                    <a href="tel:+543804722214" class="hover:text-brand-400">3804-722214</a><br />
+                    <a href="mailto:zarzueloguillermo@gmail.com" class="hover:text-brand-400">zarzueloguillermo@gmail.com</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-white">Catamarca</p>
+                  <p class="mt-2">
+                    Orozco Diego<br />
+                    <a href="tel:+543834400146" class="hover:text-brand-400">3834-400146</a><br />
+                    <a href="mailto:diegoorozco_86@hotmail.com" class="hover:text-brand-400">diegoorozco_86@hotmail.com</a>
+                  </p>
+                  <p class="mt-3">
+                    Ing. Baigorrí Angel Sebastian<br />
+                    <a href="tel:+543834605259" class="hover:text-brand-400">3834-605259</a><br />
+                    <a href="mailto:baigorrisebastian@gmail.com" class="hover:text-brand-400">baigorrisebastian@gmail.com</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-between gap-4 pt-8 text-center text-sm text-white/40 sm:flex-row"
+        >
+          <p>
+            &copy; <span data-current-year>2026</span> Electro Test. Todos los
+            derechos reservados.
+          </p>
+          <p class="text-xs">Desarrollo por PlexiWeb Development.</p>
+        </div>
+      </div>
     </footer>
 
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/5493834400146?text=Hola,%20me%20gustar%C3%ADa%20consultar%20por%20sus%20servicios"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-fab"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.988 2.896 9.83 9.83 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.82 11.82 0 0 0 20.465 3.49" />
+      </svg>
+    </a>
 
-    <!-- ==========================================
-         SCRIPTS INTERACTIVOS (MENÚ Y ACORDEÓN)
-         ========================================== -->
-    <script>
-        // Control de Menú Móvil
-        const btnMenuMovil = document.getElementById('btn-menu-movil');
-        const menuMovil = document.getElementById('menu-movil');
-
-        btnMenuMovil.addEventListener('click', () => {
-            menuMovil.classList.toggle('hidden');
-        });
-
-        // Cerrar menú móvil al hacer click en enlace
-        document.querySelectorAll('#menu-movil a').forEach(enlace => {
-            enlace.addEventListener('click', () => {
-                menuMovil.classList.add('hidden');
-            });
-        });
-
-        // Control de Acordeones de la Sección 5 (Servicios)
-        // Por defecto, abrimos el primero (protecciones)
-        document.addEventListener('DOMContentLoaded', () => {
-            toggleAccordion('protecciones');
-        });
-
-        function toggleAccordion(id) {
-            const content = document.getElementById(`content-${id}`);
-            const icon = document.getElementById(`icon-${id}`);
-            
-            // Lista de todos los ids de acordeones para cerrar el resto si se abre uno nuevo
-            const todos = ['protecciones', 'mantenimiento', 'instalacion', 'telecontrol', 'reparaciones'];
-            
-            todos.forEach(item => {
-                const c = document.getElementById(`content-${item}`);
-                const ic = document.getElementById(`icon-${item}`);
-                
-                if (item === id) {
-                    // Alternar el actual
-                    if (c.classList.contains('hidden')) {
-                        c.classList.remove('hidden');
-                        ic.classList.add('rotate-180');
-                    } else {
-                        c.classList.add('hidden');
-                        ic.classList.remove('rotate-180');
-                    }
-                } else {
-                    // Cerrar el resto para limpieza visual
-                    c.classList.add('hidden');
-                    ic.classList.remove('rotate-180');
-                }
-            });
-        }
-    </script>
-</body>
+    <!-- Botón volver arriba -->
+    <button
+      type="button"
+      class="scroll-top"
+      data-scroll-top
+      data-visible="false"
+      aria-label="Volver arriba"
+    >
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+    </button>
+  </body>
 </html>

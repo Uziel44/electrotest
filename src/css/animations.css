@@ -1,0 +1,118 @@
+/* =============================================================================
+   ANIMACIONES
+   Los keyframes puramente decorativos viven acá; las animaciones de entrada
+   por scroll las orquesta GSAP desde src/js/modules/animations.js
+   ========================================================================== */
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes scroll-hint {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  .animate-scroll-hint {
+    animation: scroll-hint 2s var(--ease-out-expo) infinite;
+  }
+
+  /* Estado inicial de los elementos que GSAP va a revelar.
+     Se aplica sólo si el JS arrancó (clase .js en <html>), así el contenido
+     nunca queda invisible si el script falla o está bloqueado. */
+  .js [data-reveal] {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  /* Halo difuminado detrás de imágenes destacadas */
+  .glow-behind {
+    position: relative;
+  }
+
+  .glow-behind::before {
+    content: '';
+    position: absolute;
+    inset: -0.25rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      to top right,
+      var(--color-brand-500),
+      var(--color-ink-900)
+    );
+    opacity: 0.25;
+    filter: blur(1.25rem);
+    z-index: -1;
+  }
+
+  /* Zoom suave al pasar el mouse sobre una foto dentro de su marco */
+  .img-zoom {
+    @apply transition-transform duration-700;
+    transition-timing-function: var(--ease-out-expo);
+  }
+
+  .group:hover .img-zoom {
+    @apply scale-105;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   ACCESIBILIDAD: respetar la preferencia de movimiento reducido del sistema.
+   Si el usuario la activa, todo queda visible pero sin desplazamientos.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .animate-float,
+  .animate-scroll-hint,
+  .whatsapp-fab::before {
+    animation: none !important;
+  }
+}

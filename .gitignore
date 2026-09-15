@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.vite/
+
+# Imágenes originales sin optimizar, ya migradas a public/img/ con nombres
+# descriptivos. Se conservan localmente por si hace falta volver a exportar
+# una versión distinta, pero no tienen que subirse al repo.
+_originales-sin-usar/
