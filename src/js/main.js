@@ -97,8 +97,10 @@ function boot() {
   initImages(() => refreshScrollTriggers());
 
   // --- Año dinámico en el pie ---------------------------------------------
-  const yearEl = document.querySelector('[data-current-year]');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  const year = String(new Date().getFullYear());
+  document.querySelectorAll('[data-current-year]').forEach((el) => {
+    el.textContent = year;
+  });
 }
 
 if (document.readyState === 'loading') {
